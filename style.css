@@ -1,0 +1,133 @@
+/* Plik style.css */
+
+body {
+    background-color: #4c4a4a;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centruje horyzontalnie */
+    align-items: center;   /* Centruje wertykalnie */
+    height: 100vh;
+    font-family: 'Comforta';
+    text-align: center;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    width: 100%; 
+    height: 100%; /* Ważne, aby wypełniał przestrzeń body */
+    
+    display: flex;
+    flex-direction: column; /* Ustawia elementy w kolumnie */
+    justify-content: center; /* Centruje elementy w kolumnie */
+    align-items: center;   /* Centruje elementy wzdłuż osi poprzecznej (horyzontalnie) */
+    
+    position: relative; /* Pozwoli na pozycjonowanie #mainText i #sunflower */
+}
+
+#mainButton {
+    background-color: #333333; /* Ciemniejszy przycisk */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Płynne przejścia */
+    outline: none; /* Usuwa obramowanie po kliknięciu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Delikatny cień */
+}
+
+#mainButton:hover {
+    background-color: #555555; /* Zmiana koloru po najechaniu */
+}
+
+#mainText {
+    color: white;
+    font-size: 4em;
+    padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: 95%;
+    
+    position: absolute; /* Pozostawiamy absolutne pozycjonowanie */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8); /* KLUCZOWE: Centrowanie absolutne */
+    opacity: 0; 
+    white-space: pre-wrap;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+#mumin{
+    /* Ustaw maksymalny rozmiar zdjęcia, żeby nie było za duże na smartfonie */
+    max-width: 70%;
+    height: auto; /* Zachowanie proporcji */
+    border-radius: 10px; /* Opcjonalnie: zaokrąglone rogi */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+
+    /* Pozycjonowanie, aby pojawiło się pod słonecznikiem */
+    position: absolute;
+    top: 22%; /* Przykładowa pozycja w pionie, możesz ją dostosować */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrowanie względem siebie */
+
+    /* Ukrycie i animacja */
+    opacity: 0.2;
+    transition: opacity 1s ease-in; /* Płynne pojawienie się w ciągu 1 sekundy */
+}
+
+#spotifyLink {
+    color: #4CAF50; /* Czysty zielony kolor */
+    text-decoration: none; /* Usuń domyślne podkreślenie */
+    font-size: 2.5em;
+    font-weight: bold;
+    
+    /* Pozycjonowanie, aby był na dole, pod słonecznikami */
+    position: absolute;
+    top: 75%; /* Możesz dostosować tę wartość, aby był niżej */
+    left: 50%;
+    transform: translateX(-50%); /* Centrowanie w poziomie */
+    
+    /* Płynne pojawienie się */
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+#spotifyLink:hover {
+    color: #55DDAA;
+    text-decoration: underline;
+}
+
+#sunflower {
+    font-size: 4em; 
+    /* USUNIĘTO: margin-top: 20px; - niepotrzebne przy absolutnym pozycjonowaniu */
+    color: #FFC107; 
+    
+    position: absolute;
+    /* Ustawienie pozycji słonecznika względnej do .content-wrapper */
+    top: 60%; /* Powiedzmy, że chcemy go bardzo nisko, ale nie na dnie */
+    left: 50%;
+    transform: translateX(-50%); /* Centrujemy horyzontalnie */
+    
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+/* Klasy do animacji */
+.hidden {
+    display: none !important; /* Całkowite ukrycie i wyłączenie z layoutu */
+}
+
+.fade-in {
+    opacity: 1;
+    transform: scale(1); /* Zaczyna od normalnego rozmiaru */
+}
+
+.fade-out {
+    opacity: 0;
+    transform: scale(0.8); /* Zaczyna od nieco mniejszego rozmiaru */
+}
+.resolved-char {
+    color: #4CAF50; /* Klasyczna, przyjemna zieleń */
+    /* Opcjonalnie: możesz dodać pogrubienie dla podkreślenia */
+    font-weight: bold; 
+}
