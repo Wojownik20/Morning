@@ -84,7 +84,7 @@ body {
     
     /* Pozycjonowanie, aby był na dole, pod słonecznikami */
     position: absolute;
-    top: 75%; /* Możesz dostosować tę wartość, aby był niżej */
+    top: 85%; /* Możesz dostosować tę wartość, aby był niżej */
     left: 50%;
     transform: translateX(-50%); /* Centrowanie w poziomie */
     
@@ -132,3 +132,4 @@ body {
     font-weight: bold; 
 
 }
+
