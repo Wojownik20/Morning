@@ -79,7 +79,7 @@ body {
 #spotifyLink {
     color: #4CAF50; /* Czysty zielony kolor */
     text-decoration: none; /* Usuń domyślne podkreślenie */
-    font-size: 2.5em;
+    font-size: 1.5em;
     font-weight: bold;
     
     /* Pozycjonowanie, aby był na dole, pod słonecznikami */
@@ -130,4 +130,5 @@ body {
     color: #4CAF50; /* Klasyczna, przyjemna zieleń */
     /* Opcjonalnie: możesz dodać pogrubienie dla podkreślenia */
     font-weight: bold; 
+
 }
